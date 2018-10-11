@@ -21,8 +21,8 @@ void Widget::resizeGL(int w, int h)
 }
 
 static const char *vertexShaderCode =
-"                                    \
-    in vec4 position;                \
+"\
+    attribute vec4 position;         \
     void main() {                    \
         gl_Position = position;      \
     }                                \
@@ -30,11 +30,10 @@ static const char *vertexShaderCode =
 
 static const char *fragmentShaderCode =
 "\
-    #version 130\n\
-                                              \
-    out vec4 out_color;                       \
+    vec4 out_color;                           \
     void main() {                             \
-        out_color = vec4(1.0, 1.0, 1.0, 1.0); \
+        out_color = vec4(0.7, 1.0, 0.5, 1.0); \
+        gl_FragColor = out_color;             \
     }                                         \
 ";
 
