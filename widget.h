@@ -18,7 +18,7 @@ protected:
     void paintGL() override;
 
 private:
-    GLuint vao = 0;
+    GLuint vao = 0; // vertex array object name/id
 };
 
 #endif // WIDGET_H
